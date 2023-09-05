@@ -1,0 +1,143 @@
+/* District Strats */
+
+
+/* .animate{
+  animation-name: changeColor;
+  animation-duration: 4s;
+}
+.animate:hover {
+  animation-name: changeColor1;
+  animation-duration: 4s;
+}
+@keyframes changeColor {
+  50%  {color: blue;}
+  100% {color: green;}
+}
+
+@keyframes changeColor1 {
+  50%  {color: blue;}
+  100% {color: green;}
+} */
+
+.distitle {
+  
+    font: bolder 5rem/5rem "EB Garamond";
+    background-image: url("../district/text-bg1.jpg");
+    -webkit-background-clip: text;
+    color: transparent;
+    overflow: hidden;
+  
+}
+.disImage
+{
+  border: 1px solid green;
+}
+
+.backdrop {
+    background-size: contain;
+    background-position: center;
+    margin: auto;
+    margin-top: 40px;
+    /* width: 75vw; */
+  }
+  
+  .backdrop.dis1 {
+    background-image: url("../district/text-1.jpg");
+    width: 70%;
+  }
+  
+  .backdrop.dis2 {
+    background-image: url("../district/text-2.jpg");
+    width: 70%;
+  }
+  .backdrop.dis3 {
+    background-image: url("../district/text-3.jpg");
+    width: 70%;
+  }
+  .backdrop.dis4 {
+    background-image: url("../district/text-4.jpg");
+    width: 70%;
+  }
+  .backdrop.dis5 {
+    background-image: url("../district/text-5.jpg");
+    width: 70%;
+  }
+  .backdrop.dis6 {
+    background-image: url("../district/text-6.jpg");
+    width: 70%;
+  }
+  .backdrop.dis7 {
+    background-image: url("../district/text-7.jpg");
+    width: 70%;
+  }
+  .backdrop.dis8 {
+    background-image: url("../district/text-8.jpg");
+    width: 70%;
+  }
+  .backdrop.dis9 {
+    background-image: url("../district/text-9.jpg");
+    width: 70%;
+  }
+  .backdrop.dis10 {
+    background-image: url("../district/text-10.jpg");
+    width: 70%;
+  }
+  .backdrop.dis11 {
+    background-image: url("../district/text-11.jpg");
+    width: 70%;
+  }
+  .backdrop.dis12 {
+    background-image: url("../district/text-12.jpg");
+    width: 70%;
+  }
+  .backdrop.dis13 {
+    background-image: url("../district/text-13.jpg");
+    width: 70%;
+  }
+  .backdrop.dis14 {
+    background-image: url("../district/text-14.jpg");
+    width: 70%;
+  }
+  
+  .text {
+    color: white;
+    border: 4px white solid;
+    mix-blend-mode: multiply;
+    font: bolder 25px monospace;
+    text-align: center;
+    margin: 0;
+    cursor: pointer;
+    transition: text-indent 0.5s;
+  }
+  
+  .text:hover {
+    text-indent: 5px;
+    transition: text-indent 0.5s;
+  }
+  
+  .text:hover::before {
+    display: inline-block;
+    content: "✈︎";
+  }
+  
+  .backdrop .text {
+    font-family: "Alfa Slab One", cursive;
+    background-color:rgb(71 139 71);;
+    outline: 4px rgb(51, 105, 75) solid;
+  }
+  
+  /* .text.dis2 {
+    font-family: "Bungee Shade", cursive;
+    background-color: rgb(4, 107, 49);
+    outline: 4px rgb(51, 105, 75) solid;
+  }
+  
+  .text.dis3 {
+    font-family: "Jacques Francois Shadow", cursive;
+    background-color: rgb(4, 107, 49);
+    outline: 4px rgb(51, 105, 75) solid;
+  } */
+
+
+
+/* District End */

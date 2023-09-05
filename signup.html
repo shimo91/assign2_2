@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kerala Travel </title>
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <!-- Bootstrap css cdn -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <!-- bootstrap icon -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="css/style.css">
+        
+</head>
+<body>
+    <!-- Navbar design -->
+
+    <nav class="navbar navbar-expand-lg bg-success text-light px-5">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"><img id="logo" src="images/logo.png" alt="Kerala Tours"> </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="signup.html">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="login.html">Login</a>
+                </li>
+                <li class="nav-item">
+                  <!-- <a class="nav-link text-light" href="district.html">District</a> -->
+                <div class="dropdown show" >
+                    <a class="btn btn-success dropdown-toggle " href="district.html" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     District
+                    </a>
+                  
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <a class="dropdown-item" href="district.html">All District</a>
+                      <a class="dropdown-item" href="#">Kasaragod</a>
+                      <a class="dropdown-item" href="kannur.html">Kannur</a>
+                      <a class="dropdown-item" href="wayanad.html">Wayanad</a>
+                      <a class="dropdown-item" href="#">Kozhikode</a>
+                      <a class="dropdown-item" href="#">Malappuram</a>
+                      <a class="dropdown-item" href="#">Palakkad</a>
+                      <a class="dropdown-item" href="thrissur.html">Thrissur</a>
+                      <a class="dropdown-item" href="cochi.html">Eranakulam</a>
+                      <a class="dropdown-item" href="#">Idukki</a>
+                      <a class="dropdown-item" href="#">Kottayam</a>
+                      <a class="dropdown-item" href="alappy.html">Alappuzha</a>
+                      <a class="dropdown-item" href="#">Pathanamthitta</a>
+                      <a class="dropdown-item" href="#">Kollam</a>
+                      <a class="dropdown-item" href="#">Thiruvananthapuram</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            
+          </div>
+        </div>
+      </nav>
+<!-- navbar end -->
+
+
+
+<!-- Sign up starts  -->
+
+<div class="container signup-container">
+    <form class="row" action="#" >
+        <div class="form">
+        </br></br>
+            <div class="form-group mb-3" >
+                <input type="text" class="form-control mb-0" id="fname" placeholder="firstname" >
+                <span id="err1" class="errFnt"></span>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="lname" placeholder="lastname" >
+                <span id="err2" class="errFnt"></span>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="phone" placeholder="Phone Number" onchange="validPhone();">
+              <span id="err3" class="errFnt"></span>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="email" placeholder="email id"  onchange="validEmail();">
+                <span id="err4" class="errFnt"></span>
+              </div>
+              <div class="input-group">
+                <input type="password" class="form-control" id="pwd" placeholder="Password" onchange="validPass();">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"><i class="bi bi-info-circle" id="pwdinfo" data-toggle="tooltip" title="Password should required minimum 8 characters, at least one uppercase, and one lower case, must contain at least one number" ></i></span>
+                </div>
+              </div>
+              <span id="err5" class="errFnt"></span>
+              
+              <div class="col-12 form-group">
+                <span id="err" class="errFnt"></span>
+                <span id="errs" class="errFnt"></span>
+                <br>
+                <button type="button" class="btn btn-primary" onclick="return requiredAll();">Sign Up</button>
+              </div>
+
+        </div>
+    </form>
+</div>
+
+
+<!-- Sign up ends -->
+
+
+<!-- Modal for success starts-->
+
+<div class="modal" tabindex="-1" id="successModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <div class="modal-body">
+        <p>Registered Successfully</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for success end-->
+
+<!-- Footer Starts -->
+<footer class="new_footer_area bg_color">
+    
+    <div class="container-fluid new_footer_top">
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+                    <h3 class="f-title f_600 t_color f_size_18 text-center mt-3">Get in Touch</h3>
+                    <p>Don’t miss any updates of our new packages.!</p>
+                    <form action="#" class="f_subscribe_two mailchimp" >
+                        <input type="email" name="EMAIL" class="form-control memail" placeholder="Email" required>
+                        <button class="btn btn_get btn_get_two" type="submit">Subscribe</button>
+                        <p class="mchimp-errmessage" style="display: none;"></p>
+                        <p class="mchimp-sucmessage" style="display: none;"></p>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
+                    <h3 class="f-title f_600 t_color f_size_18 text-center mt-3">Packages</h3>
+                    <ul class="list-unstyled f_list text-center">
+                      <li><a href="#">Family Package</a></li>
+                      <li><a href="#">Honeymoon Package</a></li>
+                      <li><a href="#">Hill station Package</a></li>
+                      <li><a href="#">Prilgrimage Package</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+                    <h3 class="f-title f_600 t_color f_size_18 text-center mt-3">Social Media</h3>
+                    <div class="f_social_icon text-center">
+                        <a href="#" class="fab fa-facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="fab fa-twitter"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="fab fa-linkedin"><i class="bi bi-whatsapp"></i></a>
+                        <a href="#" class="fab fa-pinterest"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid footer_bg d-none d-lg-block">
+        <div class="footer_bg_one"></div>
+    </div>
+
+    <div class="footer_bottom">
+      <div class="container">
+          <div class="row align-items-center">
+              <div class="col-12">
+                  <p class="mb-0 f_400 py-1 text-center">© kerala travel 2023 All rights reserved.</p>
+              </div>
+              
+          </div>
+      </div>
+  </div>
+</footer>
+
+<!-- Footer Ends -->
+
+<script src="js/validation.js"></script>
+
+<!-- $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+}) -->
+
+
+    <!-- <script>
+
+      $(document).on('ready', function() {
+        $('#pwdinfo').tooltip('show');
+            
+          });
+    </script> -->
+
+    <!-- Bottstrap js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    
+</body>
+</html>
