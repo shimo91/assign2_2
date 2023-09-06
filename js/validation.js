@@ -53,7 +53,7 @@ function requiredAll()
             // myModal.toggle();
             strengthBadge.style.display = 'none';
             strengthBadge.style.backgroundColor = 'red'
-            strengthBadge.textContent = 'week';
+            strengthBadge.textContent = 'Poor';
 
             return true;
         }
@@ -206,11 +206,11 @@ function requiredloginAll()
          strengthBadge.style.backgroundColor = "green"
          strengthBadge.textContent = 'Strong'
      } else if(mediumPassword.test(PasswordParameter)){
-         strengthBadge.style.backgroundColor = 'blue'
+         strengthBadge.style.backgroundColor = 'orange'
          strengthBadge.textContent = 'Medium'
      } else{
          strengthBadge.style.backgroundColor = 'red'
-         strengthBadge.textContent = 'Weak'
+         strengthBadge.textContent = 'Poor'
      }
  }
 
