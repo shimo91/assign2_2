@@ -176,6 +176,9 @@ function requiredloginAll()
             errs.style.opacity="1";
             
             setTimeout(function(){fadeOut();}, 2000);
+            strengthBadge.style.display = 'none';
+            strengthBadge.style.backgroundColor = 'red'
+            strengthBadge.textContent = 'Poor';
             return true;
         }
     }
